@@ -23,12 +23,36 @@
     "postpages": "rimraf pages-dist",
 
     "release": "release-it --config='config/.release-it.json'",
-    "postrelease": "yarn pages"
+    "postrelease": "yarn pages",
+
+    "lint": "yarn lint:styles && yarn lint:polymer && yarn lint:js",
+    "lint:styles": "yarn stylelint *styles.html",
+    "lint:polymer": "polymer lint",
+    "lint:js": "yarn eslint . --fix",
+
+    "precommit": "lint-staged"
   },
-  "dependencies": {
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
     "browser-sync": "^2.18.13",
+    "eslint": "^4.10.0",
+    "eslint-config-google": "^0.9.1",
     "gh-pages": "^1.0.0",
-    "release-it": "^3.2.0"
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "release-it": "^3.2.0",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-processor-html": "^1.0.0"
   },
-  "version": "0.0.0"
-}
+  "version": "0.0.13",
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*styles.html": [
+      "stylelint",
+      "git add"
+    ]
+  }

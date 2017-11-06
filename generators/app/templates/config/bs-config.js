@@ -13,114 +13,114 @@
  |
  */
 module.exports = {
-    "ui": {
-        "port": 3001,
-        "weinre": {
-            "port": 8080
-        }
+    'ui': {
+        'port': 3001,
+        'weinre': {
+            'port': 8080,
+        },
     },
-    "files": [
-      "bower_components/**/*",
+    'files': [
+      'bower_components/**/*',
       {
-        match: ["<%= elementName %>.js"],
-        fn:    function (event, file) {
+        match: ['gen-test.js'],
+        fn: function(event, file) {
           const exec = require('child_process').exec;
           exec('yarn analyze');
-        }
+        },
       },
       {
         match: ['*'],
-        fn:    function (event, file) {
+        fn: function(event, file) {
           const exec = require('child_process').exec;
-          exec(`cp ${file} bower_components/<%= elementName %>`);
-        }
-      }
-    ],
-    "watchEvents": [
-        "change"
-    ],
-    "watchOptions": {
-        "ignoreInitial": true
-    },
-    "server": {
-      baseDir: "./",
-      index: "index.html"
-    },
-    "proxy": false,
-    "port": 3000,
-    "middleware": false,
-    "serveStatic": [],
-    "ghostMode": {
-        "clicks": true,
-        "scroll": true,
-        "location": true,
-        "forms": {
-            "submit": true,
-            "inputs": true,
-            "toggles": true
-        }
-    },
-    "logLevel": "info",
-    "logPrefix": "Browsersync",
-    "logConnections": false,
-    "logFileChanges": true,
-    "logSnippet": true,
-    "rewriteRules": [],
-    "open": "local",
-    "browser": "default",
-    "cors": false,
-    "xip": false,
-    "hostnameSuffix": false,
-    "reloadOnRestart": false,
-    "notify": false,
-    "scrollProportionally": true,
-    "scrollThrottle": 0,
-    "scrollRestoreTechnique": "window.name",
-    "scrollElements": [],
-    "scrollElementMapping": [],
-    "reloadDelay": 0,
-    "reloadDebounce": 0,
-    "reloadThrottle": 0,
-    "plugins": [],
-    "injectChanges": true,
-    "startPath": "bower_components/<%= elementName %>",
-    "minify": true,
-    "host": null,
-    "localOnly": false,
-    "codeSync": true,
-    "timestamps": true,
-    "clientEvents": [
-        "scroll",
-        "scroll:element",
-        "input:text",
-        "input:toggles",
-        "form:submit",
-        "form:reset",
-        "click"
-    ],
-    "socket": {
-        "socketIoOptions": {
-            "log": false
+          exec(`cp ${file} bower_components/gen-test`);
         },
-        "socketIoClientConfig": {
-            "reconnectionAttempts": 50
-        },
-        "path": "/browser-sync/socket.io",
-        "clientPath": "/browser-sync",
-        "namespace": "/browser-sync",
-        "clients": {
-            "heartbeatTimeout": 5000
-        }
+      },
+    ],
+    'watchEvents': [
+        'change',
+    ],
+    'watchOptions': {
+        'ignoreInitial': true,
     },
-    "tagNames": {
-        "less": "link",
-        "scss": "link",
-        "css": "link",
-        "jpg": "img",
-        "jpeg": "img",
-        "png": "img",
-        "svg": "img",
-        "gif": "img",
-        "js": "script"
-    }
+    'server': {
+      baseDir: './',
+      index: 'index.html',
+    },
+    'proxy': false,
+    'port': 3000,
+    'middleware': false,
+    'serveStatic': [],
+    'ghostMode': {
+        'clicks': true,
+        'scroll': true,
+        'location': true,
+        'forms': {
+            'submit': true,
+            'inputs': true,
+            'toggles': true,
+        },
+    },
+    'logLevel': 'info',
+    'logPrefix': 'Browsersync',
+    'logConnections': false,
+    'logFileChanges': true,
+    'logSnippet': true,
+    'rewriteRules': [],
+    'open': 'local',
+    'browser': 'default',
+    'cors': false,
+    'xip': false,
+    'hostnameSuffix': false,
+    'reloadOnRestart': false,
+    'notify': false,
+    'scrollProportionally': true,
+    'scrollThrottle': 0,
+    'scrollRestoreTechnique': 'window.name',
+    'scrollElements': [],
+    'scrollElementMapping': [],
+    'reloadDelay': 0,
+    'reloadDebounce': 0,
+    'reloadThrottle': 0,
+    'plugins': [],
+    'injectChanges': true,
+    'startPath': 'bower_components/gen-test',
+    'minify': true,
+    'host': null,
+    'localOnly': false,
+    'codeSync': true,
+    'timestamps': true,
+    'clientEvents': [
+        'scroll',
+        'scroll:element',
+        'input:text',
+        'input:toggles',
+        'form:submit',
+        'form:reset',
+        'click',
+    ],
+    'socket': {
+        'socketIoOptions': {
+            'log': false,
+        },
+        'socketIoClientConfig': {
+            'reconnectionAttempts': 50,
+        },
+        'path': '/browser-sync/socket.io',
+        'clientPath': '/browser-sync',
+        'namespace': '/browser-sync',
+        'clients': {
+            'heartbeatTimeout': 5000,
+        },
+    },
+    'tagNames': {
+        'less': 'link',
+        'scss': 'link',
+        'css': 'link',
+        'jpg': 'img',
+        'jpeg': 'img',
+        'png': 'img',
+        'svg': 'img',
+        'gif': 'img',
+        'js': 'script',
+    },
 };
