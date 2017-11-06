@@ -47,7 +47,7 @@
     "pretest": "eslint .",
     "precommit": "lint-staged",
     "test": "jest",
-    "release": "release-it --config='config/.release-it.json'",
+    "release": "release-it --config='config/.release-it.json'"
   },
   "lint-staged": {
     "*.js": [
