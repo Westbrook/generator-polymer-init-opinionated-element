@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title><%= elementName %> test</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+    <script src="../../test-fixture/test-fixture-mocha.js"></script>
+    <link rel="import" href="../../polymer/polymer.html">
+
+    <link rel="import" href="../<%= elementName %>.html">
+  </head>
+  <body>
+
+    <test-fixture id="<%= elementName %>">
+      <template>
+        <<%= elementName %>></<%= elementName %>>
+      </template>
+    </test-fixture>
+
+    <script>
+      describe('<%= elementName %>', () => {
+        let element;
+
+        a11ySuite('<%= elementName %>');
+
+        beforeEach(function() {
+          element = fixture('<%= elementName %>');
+        });
+
+        it('This element has failing tests for you to correct!', () => {
+          assert.equal(element.prop1, 'Extravagant but wrong or missing property value.');
+          const elementShadowRoot = element.shadowRoot;
+          const elementHeader = elementShadowRoot.querySelector('h2');
+          assert.notEqual(elementHeader, null);
+        });
+
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "name": "<%= elementName %>",
+  "author":"<%= authorName %>",
+  "version": "0.0.0",
+  "description": "<%= elementDescription %>",
+  "private": true,
+  "license": "https://github.com/<%=orgName%>/<%=elementName%>/LICENSE",
+  "homepage": "https://github.com/<%=orgName%>/<%=elementName%>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/<%=orgName%>/<%=elementName%>.git"
+  },
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
+    "iron-component-page": "polymerelements/iron-component-page#^3.0.1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "demo",
+    "config",
+    "implementation",
+    ".travis.yml",
+    ".github",
+    "wtc.conf.json",
+    "gulpfile.js",
+    "yarn-error.log",
+    "analysis.json",
+    "index.html",
+    "README.md",
+    "package.json",
+    "package-lock.json",
+    "yarn.lock"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "clean-install": "rimraf bower_components && bower install",
+    "analyze": "polymer analyze > analysis.json",
+    "sync": "browser-sync start --config 'config/bs-config.js'",
+
+    "preserve": "yarn analyze",
+    "serve": "polymer serve",
+
+    "element:clean": "rimraf bower_components/<%= elementName %>",
+    "element:directory": "mkdir bower_components/<%= elementName %>",
+    "element:copy-files": "yarn copy bower_components/<%= elementName %>",
+    "element:make": "yarn element:directory && yarn element:copy-files",
+
+    "prelive": "yarn clean:element && yarn element:make",
+    "live": "yarn analyze && yarn sync",
+
+    "copy": "cp -r *.html *.js analysis.json demo test",
+
+    "prepages": "yarn analyze && cp -r config/pages-dist pages-dist/ && cp -r bower_components/* pages-dist/ && mkdir pages-dist/<%= elementName %> && yarn copy pages-dist/<%= elementName %>/",
+    "pages": "gh-pages -d pages-dist",
+    "postpages": "rimraf pages-dist",
+
+    "release": "release-it --config='config/.release-it.json'",
+    "postrelease": "yarn pages"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gh-pages": "^1.0.0",
+    "release-it": "^3.2.0"
+  },
+  "version": "0.0.0"
+}
