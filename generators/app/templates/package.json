@@ -18,7 +18,8 @@
 
     "copy": "cp -r *.html *.js analysis.json demo test",
 
-    "prepages": "yarn analyze && cp -r config/pages-dist pages-dist/ && cp -r bower_components/* pages-dist/ && mkdir pages-dist/<%= elementName %> && yarn copy pages-dist/<%= elementName %>/",
+    "prepages":
+      "yarn analyze && cp -r config/pages-dist pages-dist/ && cp -r bower_components/* pages-dist/ && mkdir pages-dist/<%= elementName %> && yarn copy pages-dist/<%= elementName %>/",
     "pages": "gh-pages -d pages-dist",
     "postpages": "rimraf pages-dist",
 
@@ -47,12 +48,7 @@
   },
   "version": "0.0.0",
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*styles.html": [
-      "stylelint",
-      "git add"
-    ]
+    "*.js": ["eslint --fix", "git add"],
+    "*styles.html": ["stylelint", "git add"]
   }
+}

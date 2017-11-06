@@ -65,7 +65,7 @@ module.exports = class extends Generator {
 
   _dashedCaseFromSpaces(name) {
     if (typeof name !== 'undefined') {
-      return name.replace(/\s/g,'-');
+      return name.replace(/\s/g, '-');
     }
   }
 
@@ -79,7 +79,7 @@ module.exports = class extends Generator {
     );
 
     this.fs.copyTpl(
-      `${this.templatePath()}/.!(gitignore)*`,
+      `${this.templatePath()}/**/.!(gitignore)*`,
       this.destinationRoot(),
       this.props
     );
