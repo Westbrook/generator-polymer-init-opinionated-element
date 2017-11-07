@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.9.0-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run: yarn install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - restore_cache:
+          key: dependency-cache-{{ checksum "bower.json" }}
+      - run: yarn install:bower
+      - save_cache:
+          key: dependency-cache-{{ checksum "bower.json" }}
+          paths:
+            - ./bower_components
+      - run: yarn test:ci

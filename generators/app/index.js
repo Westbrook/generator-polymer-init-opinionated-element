@@ -34,6 +34,8 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'elementName',
         message: 'What would you like this element to be called?',
+        validate: input =>
+          input.indexOf('-') === -1 ? "Element name needs a '-'" : true,
         default: this.appname
       },
       {
@@ -110,6 +112,10 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.installDependencies();
+    this.installDependencies({
+      npm: false,
+      bower: true,
+      yarn: true
+    });
   }
 };
