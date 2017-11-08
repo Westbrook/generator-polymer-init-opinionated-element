@@ -35,6 +35,8 @@
     "lint:styles": "yarn stylelint *styles.html",
     "lint:polymer": "polymer lint",
     "lint:js": "yarn eslint . --fix",
+    "lint:html":
+      "yarn htmlhint --ignore **/bower_components/**,**/node_modules/**",
 
     "precommit": "lint-staged",
 
@@ -60,6 +62,7 @@
   "version": "0.0.0",
   "lint-staged": {
     "*.js": ["eslint --fix", "git add"],
-    "*styles.html": ["stylelint", "git add"]
+    "*styles.html": ["stylelint"],
+    "*.html": ["polymer lint", "htmlhint"]
   }
 }
