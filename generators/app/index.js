@@ -93,8 +93,8 @@ module.exports = class extends Generator {
     );
 
     this.fs.copyTpl(
-      this.templatePath('src/_circleci'),
-      this.destinationPath(`.circleci`),
+      this.templatePath('src/.circleci/_config.yml'),
+      this.destinationPath(`.circleci/config.yml`),
       this.props
     );
 
