@@ -1,16 +1,15 @@
 {
   "name": "generator-polymer-init-opinionated-element",
   "version": "0.0.0",
-  "description": "Polymer 2.0 component with some convinence Yarn scripts and file structure decisions for your developing pleasure.",
+  "description":
+    "Polymer 2.0 component generator with some convinence Yarn scripts and file structure decisions for your developing pleasure.",
   "homepage": "github.com/westbrook/generator-polymer-init-opinionated-element",
   "author": {
     "name": "Westbrook Johnson",
     "email": "westbrook.johnson@gmail.com",
     "url": "github.com/westbrook"
   },
-  "files": [
-    "generators"
-  ],
+  "files": ["generators"],
   "main": "generators/index.js",
   "keywords": [
     "polymer",
@@ -50,20 +49,11 @@
     "release": "release-it --config='config/.release-it.json'"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.js": ["eslint --fix", "git add"],
+    "*.json": ["prettier --write", "git add"]
   },
   "eslintConfig": {
-    "extends": [
-      "xo",
-      "prettier"
-    ],
+    "extends": ["xo", "prettier"],
     "env": {
       "jest": true,
       "node": true
@@ -77,9 +67,7 @@
         }
       ]
     },
-    "plugins": [
-      "prettier"
-    ]
+    "plugins": ["prettier"]
   },
   "repository": "Westbrook/generator-polymer-init-opinionated-element",
   "license": "Apache-2.0"
