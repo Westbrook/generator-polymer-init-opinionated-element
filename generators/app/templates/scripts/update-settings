@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+bower install element-upgrade-scripts=$1
+cp -R ./bower_components/element-upgrade-scripts/. ./
+rm -rf ./bower_components/element-upgrade-scripts

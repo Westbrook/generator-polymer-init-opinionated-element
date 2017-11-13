@@ -3,45 +3,35 @@
   "scripts": {
     "install:bower": "bower install",
     "install:bower:clean": "rimraf bower_components && bower install",
-
     "analyze": "polymer analyze > analysis.json",
-
     "sync": "browser-sync start --config 'config/bs-config.js'",
-
     "preserve": "yarn analyze",
     "serve": "polymer serve",
-
     "element:clean": "rimraf bower_components/<%= elementName %>",
     "element:directory": "mkdir bower_components/<%= elementName %>",
     "element:copy-files": "yarn copy bower_components/<%= elementName %>",
     "element:make": "yarn element:directory && yarn element:copy-files",
-
     "prelive": "yarn clean:element && yarn element:make",
     "live": "yarn analyze && yarn sync",
-
     "copy": "cp -r *.html *.js analysis.json demo test",
     "copy:pages-dist":
       "cp -r config/pages-dist pages-dist/ && cp -r bower_components/* pages-dist/",
-
     "prepages":
       "yarn analyze && yarn copy:pages-dist && mkdir pages-dist/<%= elementName %> && yarn copy pages-dist/<%= elementName %>/",
     "pages": "gh-pages -d pages-dist",
     "postpages": "rimraf pages-dist",
-
     "release": "release-it --config='config/.release-it.json'",
     "postrelease": "yarn pages",
-
     "lint": "yarn lint:styles && yarn lint:polymer && yarn lint:js",
     "lint:styles": "yarn stylelint *styles.html",
     "lint:polymer": "polymer lint",
     "lint:js": "yarn eslint . --fix",
     "lint:html":
       "yarn htmlhint --ignore **/bower_components/**,**/node_modules/**",
-
     "precommit": "lint-staged",
-
     "test": "polymer test",
-    "test:ci": "wct"
+    "test:ci": "wct",
+    "update-settings": "scripty"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
@@ -54,6 +44,7 @@
     "lint-staged": "^4.3.0",
     "polymer-cli": "^1.5.7",
     "release-it": "^3.2.0",
+    "scripty": "^1.7.2",
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0",
     "stylelint-processor-html": "^1.0.0",
