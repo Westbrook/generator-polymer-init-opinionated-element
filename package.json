@@ -1,6 +1,6 @@
 {
   "name": "generator-polymer-init-opinionated-element",
-  "version": "0.0.0",
+  "version": "0.0.6",
   "description":
     "Polymer 2.0 component generator with some convinence Yarn scripts and file structure decisions for your developing pleasure.",
   "homepage": "github.com/westbrook/generator-polymer-init-opinionated-element",
@@ -42,7 +42,7 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepublish": "nsp check",
+    "prepare": "nsp check",
     "pretest": "eslint .",
     "precommit": "lint-staged",
     "test": "jest",
@@ -70,5 +70,8 @@
     "plugins": ["prettier"]
   },
   "repository": "Westbrook/generator-polymer-init-opinionated-element",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
 }
