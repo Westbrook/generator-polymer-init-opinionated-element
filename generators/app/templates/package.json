@@ -56,5 +56,8 @@
     "*.js": ["eslint --fix", "git add"],
     "*styles.html": ["stylelint"],
     "*.html": ["polymer lint", "htmlhint"]
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
