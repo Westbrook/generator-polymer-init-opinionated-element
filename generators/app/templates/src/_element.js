@@ -1,5 +1,6 @@
 /**
  * `<%= elementName %>`
+ * <%= elementDescription %>
  *
  *
  * @customElement

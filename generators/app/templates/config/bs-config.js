@@ -22,7 +22,7 @@ module.exports = {
     'files': [
       'bower_components/**/*',
       {
-        match: ['gen-test.js'],
+        match: ['*.js'],
         fn: function(event, file) {
           const exec = require('child_process').exec;
           exec('yarn analyze');
@@ -32,7 +32,7 @@ module.exports = {
         match: ['*'],
         fn: function(event, file) {
           const exec = require('child_process').exec;
-          exec(`cp ${file} bower_components/gen-test`);
+          exec(`cp ${file} bower_components/<%= elementName %>`);
         },
       },
     ],
@@ -83,7 +83,7 @@ module.exports = {
     'reloadThrottle': 0,
     'plugins': [],
     'injectChanges': true,
-    'startPath': 'bower_components/gen-test',
+    'startPath': 'bower_components/<%= elementName %>',
     'minify': true,
     'host': null,
     'localOnly': false,
