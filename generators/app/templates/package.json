@@ -17,7 +17,7 @@
     "copy:pages-dist":
       "cp -r config/pages-dist pages-dist/ && cp -r bower_components/* pages-dist/",
     "prepages":
-      "yarn analyze && yarn copy:pages-dist && mkdir pages-dist/<%= elementName %> && yarn copy pages-dist/<%= elementName %>/",
+      "yarn element:clean && yarn analyze && yarn copy:pages-dist && mkdir pages-dist/<%= elementName %> && yarn copy pages-dist/<%= elementName %>/",
     "pages": "gh-pages -d pages-dist",
     "postpages": "rimraf pages-dist",
     "release": "release-it --config='config/.release-it.json'",
