@@ -10,8 +10,6 @@
   "title-require": true,
   "doctype-html5": true,
   "alt-require": true,
-  "attr-value-not-empty": true,
-  "href-abs-or-rel": "rel",
   "attr-unsafe-chars": true,
   "space-tab-mixed-disabled": true,
   "inline-script-disabled": true,
