@@ -35,6 +35,20 @@ module.exports = {
           exec(`cp ${file} bower_components/<%= elementName %>`);
         },
       },
+      {
+        match: ['demo/*'],
+        fn: function(event, file) {
+          const exec = require('child_process').exec;
+          exec(`cp ${file} bower_components/<%= elementName %>/demo`);
+        },
+      },
+      {
+        match: ['test/*'],
+        fn: function(event, file) {
+          const exec = require('child_process').exec;
+          exec(`cp ${file} bower_components/<%= elementName %>/test`);
+        },
+      },
     ],
     'watchEvents': [
         'change',
