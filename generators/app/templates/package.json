@@ -11,8 +11,8 @@
     "element:directory": "mkdir bower_components/<%= elementName %>",
     "element:copy-files": "yarn copy bower_components/<%= elementName %>",
     "element:make": "yarn element:directory && yarn element:copy-files",
-    "prelive": "yarn element:clean && yarn element:make",
-    "live": "yarn analyze && yarn sync",
+    "prelive": "yarn element:clean && yarn analyze && yarn element:make",
+    "live": "yarn sync",
     "copy": "cp -r *.html *.js analysis.json demo test",
     "copy:pages-dist":
       "cp -r config/pages-dist pages-dist/ && cp -r bower_components/* pages-dist/",
