@@ -23,4 +23,7 @@ class <%=className%> extends Polymer.Element {
   }
 };
 
-customElements.define(<%=className%>.is, <%=className%>);
+customElements.define(
+  <%=className%>.is,
+  <%=className%>
+);
