@@ -8,7 +8,13 @@ module.exports = {
     "sourceType": "module",
   },
   "rules": {
-    "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
-    "block-spacing": ["error", "always"]
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "block-spacing": ["error", "always"],
+    "new-cap": [
+      "error",
+      {
+        "capIsNewExceptionPattern": "^Polymer"
+      }
+    ]
   }
 };
