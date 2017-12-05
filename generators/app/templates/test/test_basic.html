@@ -15,7 +15,7 @@
   </head>
   <body>
 
-    <test-fixture id="<%= elementName %>">
+    <test-fixture id="<%= elementName %>-tester">
       <template>
         <<%= elementName %>></<%= elementName %>>
       </template>
@@ -25,10 +25,10 @@
       describe('<%= elementName %>', () => {
         let element;
 
-        a11ySuite('<%= elementName %>');
+        a11ySuite('<%= elementName %>-tester');
 
         beforeEach(function() {
-          element = fixture('<%= elementName %>');
+          element = fixture('<%= elementName %>-tester');
         });
 
         it('This element has failing tests for you to correct!', () => {
