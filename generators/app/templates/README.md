@@ -2,23 +2,15 @@
 
 <%= elementDescription %>
 
-## Install the Polymer-CLI
+## Sauce Labs based x-browser tests
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your element locally.
-
-## Viewing Your Element
-
+When looking to expand your x-browser testing suite to include real browsers on [saucelabs.com](https://saucelabs.com/), make sure the edit `wct.conf.json` appropriately.
 ```
-$ polymer serve
+"sauce": {
+  "disabled": false, // <--- change to `true`
+  "username": "username",  // <--- add your username here
+  "accessKey": "accessKey",  // <--- add your access key here
 ```
-
-## Running Tests
-
-```
-$ polymer test
-```
-
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
 
 ## Yarn scripting
 
