@@ -2,6 +2,12 @@
 
 <%= elementDescription %>
 
+## Getting started
+Make sure you have both `yarn` and `bower` installed locally. Then run the following to get all of your dependancies installed:
+```
+yarn && yarn install:bower:clean
+```
+
 ## Sauce Labs based x-browser tests
 
 When looking to expand your x-browser testing suite to include real browsers on [saucelabs.com](https://saucelabs.com/), make sure the edit `wct.conf.json` appropriately.
@@ -11,6 +17,7 @@ When looking to expand your x-browser testing suite to include real browsers on 
   "username": "username",  // <--- add your username here
   "accessKey": "accessKey",  // <--- add your access key here
 ```
+[Learn more](https://github.com/Polymer/web-component-tester#plugins) about working with Sauce Labs and web-component-tester to take full advantage of it in your project.
 
 ## Yarn scripting
 
