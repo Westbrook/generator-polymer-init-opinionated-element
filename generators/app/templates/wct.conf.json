@@ -24,7 +24,7 @@
     "istanbub": {
       "dir": "./coverage",
       "reporters": ["text", "lcov"],
-      "include": ["/<%= elementName %>*.js"]
+      "include": ["/*.js"]
     }
   }
 }
