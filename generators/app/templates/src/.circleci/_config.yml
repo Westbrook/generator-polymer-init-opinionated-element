@@ -12,11 +12,5 @@ jobs:
           key: dependency-cache-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
-      - restore_cache:
-          key: dependency-cache-{{ checksum "bower.json" }}
       - run: yarn install:bower
-      - save_cache:
-          key: dependency-cache-{{ checksum "bower.json" }}
-          paths:
-            - ./bower_components
       - run: yarn test:ci
