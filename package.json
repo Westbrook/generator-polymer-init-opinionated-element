@@ -1,6 +1,6 @@
 {
   "name": "generator-polymer-init-opinionated-element",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description":
     "Polymer 2.0 component generator with some convinence Yarn scripts and file structure decisions for your developing pleasure.",
   "homepage": "github.com/westbrook/generator-polymer-init-opinionated-element",
