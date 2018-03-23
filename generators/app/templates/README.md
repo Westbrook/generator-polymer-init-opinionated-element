@@ -2,6 +2,11 @@
 
 <%= elementDescription %>
 
+## Clone the repo
+```
+git clone https://github.com/<%= orgName %>/<%= elementName %>.git
+```
+
 ## Getting started
 Make sure you have both `yarn` and `bower` installed locally. Then run the following to get all of your dependancies installed:
 ```
