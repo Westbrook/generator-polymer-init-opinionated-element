@@ -2,6 +2,37 @@
 
 <%= elementDescription %>
 
+<!---
+```
+<custom-element-demo>
+  <template>
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="<%= elementName %>.html">
+    <style>
+      <%= elementName %> {
+      }
+    </style>
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<<%= elementName %>>
+</<%= elementName %>>
+```
+
+## Usage
+Add notes on the usag of your component here.
+
+## Styling
+
+| Custom property | Description | Default |
+| --- | --- | --- |
+| `--custom-property` | What it does | `value` |
+
+# Development
+
 ## Clone the repo
 ```
 git clone https://github.com/<%= orgName %>/<%= elementName %>.git

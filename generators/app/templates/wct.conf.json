@@ -2,7 +2,11 @@
   "verbose": false,
   "plugins": {
     "local": {
-      "browsers": ["chrome", "firefox"]
+      "browsers": ["chrome"],
+      "browserOptions": {
+        "chrome": ["headless", "disable-gpu", "no-sandbox"],
+        "firefox": ["-headless"]
+      }
     },
     "sauce": {
       "disabled": false,
@@ -24,7 +28,15 @@
     "istanbub": {
       "dir": "./coverage",
       "reporters": ["text", "lcov"],
-      "include": ["/*.js"]
+      "include": ["/*.js"],
+      "thresholds": {
+        "global": {
+          "statements": 50,
+          "branches": 50,
+          "functions": 50,
+          "lines": 50
+        }
+      }
     }
   }
 }

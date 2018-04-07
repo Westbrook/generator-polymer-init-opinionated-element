@@ -11,13 +11,13 @@
     "element:directory": "mkdir bower_components/<%= elementName %>",
     "element:copy-files": "yarn copy bower_components/<%= elementName %>",
     "element:make": "yarn element:directory && yarn element:copy-files",
-    "prelive": "yarn element:clean && yarn analyze && yarn element:make",
+    "prelive": "yarn analyze && yarn element:clean && yarn element:make",
     "live": "yarn sync",
     "copy": "cp -r *.html *.js analysis.json demo test",
     "copy:pages-dist":
       "cp -r config/pages-dist pages-dist/ && cp -r bower_components/* pages-dist/",
     "prepages":
-      "yarn element:clean && yarn analyze && yarn copy:pages-dist && mkdir pages-dist/<%= elementName %> && yarn copy pages-dist/<%= elementName %>/",
+      "yarn analyze && yarn element:clean && yarn copy:pages-dist && mkdir pages-dist/<%= elementName %> && yarn copy pages-dist/<%= elementName %>/",
     "pages": "gh-pages -d pages-dist",
     "postpages": "rimraf pages-dist",
     "release": "release-it --config='config/.release-it.json'",
