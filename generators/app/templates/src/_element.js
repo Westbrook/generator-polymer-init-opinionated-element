@@ -1,3 +1,5 @@
+(function() {
+window.LL = window.LL || {};
 /**
  * `<%= elementName %>`
  * <%= elementDescription %>
@@ -22,8 +24,10 @@ class <%=className%> extends Polymer.Element {
     };
   }
 };
+<%=orgNamespace%>.<%=className%> = <%=className%>;
+})();
 
 customElements.define(
-  <%=className%>.is,
-  <%=className%>
+  <%=orgNamespace%>.<%=className%>.is,
+  <%=orgNamespace%>.<%=className%>
 );

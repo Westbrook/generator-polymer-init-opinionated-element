@@ -4,7 +4,7 @@
     "install:bower": "bower install",
     "install:bower:clean": "rimraf bower_components && bower install",
     "analyze": "polymer analyze > analysis.json",
-    "sync": "browser-sync start --config 'config/bs-config.js'",
+    "sync": "browser-sync . -w -c 'config/bs-config.js'",
     "preserve": "yarn analyze",
     "serve": "polymer serve",
     "element:clean": "rimraf bower_components/<%= elementName %>",

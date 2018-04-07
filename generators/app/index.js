@@ -32,6 +32,14 @@ module.exports = class extends Generator {
       },
       {
         type: 'input',
+        name: 'orgNamespace',
+        message:
+          'What is the namespace that you would like to build this component into?',
+        default: 'org',
+        store: true
+      },
+      {
+        type: 'input',
         name: 'elementName',
         message: 'What would you like this element to be called?',
         validate: input =>
