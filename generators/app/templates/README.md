@@ -23,7 +23,7 @@
 ```
 
 ## Usage
-Add notes on the usag of your component here.
+Add notes on the usage of your component here.
 
 ## Styling
 

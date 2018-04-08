@@ -57,15 +57,17 @@ module.exports = class extends Generator {
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
       this.props = props;
-      this.props.className = this._cappedCaseFromDashed(props.elementName);
+      this.props.className = this._makeClassName(props.elementName, props.orgNamespace);
     });
   }
 
-  _cappedCaseFromDashed(element) {
+  _makeClassName(element, namespace) {
     if (typeof element !== 'undefined') {
+      let regex = new RegExp(namespace, 'gi');
       return element
         .split('-')
         .map(name => {
+          if (name.match(regex)) return '';
           return name.charAt(0).toUpperCase() + name.slice(1);
         })
         .join('');

@@ -23,6 +23,18 @@ class <%=className%> extends Polymer.Element {
     return {
     };
   }
+  /**
+   * Build the HTMLTemplateElement
+   *
+   * @returns {function}
+   */
+  static get template() {
+    const html = Polymer.html;
+    return html`
+        <style include="<%= elementName %>-styles"></style>
+        <h1><%=elementName%></h1>
+    `;
+  }
 };
 <%=orgNamespace%>.<%=className%> = <%=className%>;
 })();
