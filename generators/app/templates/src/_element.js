@@ -26,7 +26,7 @@ class <%=className%> extends Polymer.Element {
   /**
    * Build the HTMLTemplateElement
    *
-   * @returns {function}
+   * @return {function}
    */
   static get template() {
     const html = Polymer.html;
