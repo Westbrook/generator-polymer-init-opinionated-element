@@ -14,21 +14,17 @@
     "prelive": "yarn analyze && yarn element:clean && yarn element:make",
     "live": "yarn sync",
     "copy": "cp -r *.html *.js analysis.json demo test",
-    "copy:pages-dist":
-      "cp -r config/pages-dist pages-dist/ && cp -r bower_components/* pages-dist/",
-    "prepages":
-      "yarn analyze && yarn element:clean && yarn copy:pages-dist && mkdir pages-dist/<%= elementName %> && yarn copy pages-dist/<%= elementName %>/",
+    "copy:pages-dist": "cp -r config/pages-dist pages-dist/ && cp -r bower_components/* pages-dist/",
+    "prepages": "yarn analyze && yarn element:clean && yarn copy:pages-dist && mkdir pages-dist/<%= elementName %> && yarn copy pages-dist/<%= elementName %>/",
     "pages": "gh-pages -d pages-dist",
     "postpages": "rimraf pages-dist",
     "release": "release-it --config='config/.release-it.json'",
     "postrelease": "yarn pages",
-    "lint":
-      "yarn lint:styles && yarn lint:polymer && yarn lint:js && yarn lint:html",
+    "lint": "yarn lint:styles && yarn lint:polymer && yarn lint:js && yarn lint:html",
     "lint:styles": "yarn stylelint *styles.html",
     "lint:polymer": "polymer lint",
     "lint:js": "yarn eslint . --fix",
-    "lint:html":
-      "yarn htmlhint --ignore **/bower_components/**,**/node_modules/**",
+    "lint:html": "yarn htmlhint --ignore **/bower_components/**,**/node_modules/**",
     "precommit": "lint-staged",
     "test": "polymer test",
     "test:ci": "wct",
@@ -55,9 +51,17 @@
   },
   "version": "0.0.0",
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
-    "*styles.html": ["stylelint"],
-    "*.html": ["polymer lint", "htmlhint"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*styles.html": [
+      "stylelint"
+    ],
+    "*.html": [
+      "polymer lint",
+      "htmlhint"
+    ]
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
