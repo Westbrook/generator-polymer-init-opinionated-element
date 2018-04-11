@@ -50,8 +50,8 @@
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0",
     "stylelint-processor-html": "^1.0.0",
-    "web-component-tester": "^6.4.1",
-    "wct-istanbub": "^0.0.7"
+    "wct-istanbub": "^0.0.7",
+    "web-component-tester": "^6.4.1"
   },
   "version": "0.0.0",
   "lint-staged": {
