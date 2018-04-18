@@ -1,6 +1,7 @@
 {
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
+    "grep": "grep -Ir --exclude=analysis.json --exclude-dir=bower_components --exclude-dir=node_modules --exclude-dir=coverage",
     "install:bower": "bower install",
     "install:bower:clean": "rimraf bower_components && bower install",
     "analyze": "polymer analyze > analysis.json",
