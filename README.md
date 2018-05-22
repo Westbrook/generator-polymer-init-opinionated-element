@@ -1,4 +1,4 @@
-# generator-polymer-init-opinionated-element [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-polymer-init-opinionated-element
 > Polymer 2.0 component with some convinence Yarn scripts and file structure decisions for your developing pleasure.
 
 ## Installation
