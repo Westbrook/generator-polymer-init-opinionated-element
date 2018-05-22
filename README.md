@@ -6,33 +6,22 @@
 First, install [Yeoman](http://yeoman.io) and generator-polymer-init-opinionated-element using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
-npm install -g yo
-npm install -g generator-polymer-init-opinionated-element
+yarn global app polymer-cli
+yarn global add yo
+yarn global add generator-polymer-init-opinionated-element
 ```
 
 Then generate your new project:
 
 ```bash
-yo polymer-init-opinionated-element
+polymer init
+? Which starter template would you like to use?
+❯ opinionated-element - Polymer 2.0 component generator with some convinence Yarn scripts and file structure decisions for your developing pleasure.
+? What is your name? (You Name)
+? What is your GitHub username or organization? (recent-org)
+? What is the namespace that you would like to build this component into? (org)
+? What would you like this element to be called? (name-of-element) //notice that web components have to have a hyphen in the name
+ What does this element do? (nothing yet, but something awesome)  
 ```
 
-## Getting To Know Yeoman
-
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
-
-## License
-
-Apache-2.0 © [Westbrook Johnson](github.com/westbrook)
-
-
-[npm-image]: https://badge.fury.io/js/generator-polymer-init-opinionated-element.svg
-[npm-url]: https://npmjs.org/package/generator-polymer-init-opinionated-element
-[travis-image]: https://travis-ci.org/Westbrook/generator-polymer-init-opinionated-element.svg?branch=master
-[travis-url]: https://travis-ci.org/Westbrook/generator-polymer-init-opinionated-element
-[daviddm-image]: https://david-dm.org/Westbrook/generator-polymer-init-opinionated-element.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/Westbrook/generator-polymer-init-opinionated-element
-[coveralls-image]: https://coveralls.io/repos/Westbrook/generator-polymer-init-opinionated-element/badge.svg
-[coveralls-url]: https://coveralls.io/r/Westbrook/generator-polymer-init-opinionated-element
+Then the generator will `yarn install` and `bower install` for you and you're off and running!
